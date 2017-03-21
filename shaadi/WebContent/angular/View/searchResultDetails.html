@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<script>
+	$(document).ready(function(){
+	      $("#tablepD").show();
+         $("#personalDetails").click(function(){
+		
+		 $("#tablepD").toggle();
+		 });
+		 
+		  $("#tablepD1").show();
+         $("#professionaldetails").click(function(){
+		 
+		 $("#tablepD1").toggle();
+		 });
+		 
+		  $("#tablepD2").show();
+         $("#lifestyle").click(function(){
+		 
+		 $("#tablepD2").toggle();
+		 });
+		 
+		  $("#tablepD3").show();
+         $("#others").click(function(){
+		 
+		 $("#tablepD3").toggle();
+		 });
+   
+  
+    });
+	
+	function openNav() {
+	    document.getElementById("myNav").style.width = "100%";
+	}
+
+	function closeNav() {
+	    document.getElementById("myNav").style.width = "0%";
+	}
+ </script>
+ 
+ <style>
+ table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+ </style>
+</head>
+<body class="home">
+
+
+	
+	<div id="container">
+		<!-- Header
+		    ================================================== -->
+		<header class="clearfix">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div class="top-line">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								<ul class="info-list">
+									<li>
+										<i class="fa fa-globe"></i>
+										Language: <span>English</span>
+									</li>
+									<li>
+										<i class="fa fa-phone"></i>
+										Call us:
+										<span>+1 223 334 3434</span>
+									</li>
+									<li>
+										<i class="fa fa-clock-o"></i>
+										working time:
+										<span>08:00 - 19:00</span>
+									</li>
+								</ul>
+							</div>	
+							<div class="col-md-4">
+								<ul class="social-icons">
+									<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+									<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+									<li><a class="dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+								</ul>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="container" style="background:orange;">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html">Chat-Book</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+				     <li><a href="#/home">Home</a></li>
+					<li><a href="#">My Profile</a></li>								
+					<li><a href="about.html">Friends</a></li>								
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Search <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="sidebar-left.html">Search By Profile Id</a></li>
+							<li><a href="sidebar-right.html">Search By Profession</a></li>
+							<li><a href="single.html">Search By Caste/Religion</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Matches <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="sidebar-left.html">Who Viewed My Profile</a></li>
+							<li><a href="sidebar-right.html">New Matches</a></li>							
+						</ul>
+					</li>					
+				</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+			<div id="head" class="parallax" parallax-speed="2">
+		<h1 id="logo" class="text-center" style="opacity:none;">
+			<img class="img-circle" ng-src="data:image/jpeg;base64,{{profileImage}}" onclick="openNav();" alt="">
+			<span class="title"><i>{{userDetails.name}}</i></span>			
+		</h1>
+	      </div>
+		</header>
+		<!-- End Header -->
+</div>
+
+
+<div id="myNav" class="overlay">
+ 
+  <div class="overlay-content">
+   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times;</a>
+   <img ng-src="data:image/jpeg;base64,{{profileImage}}" alt="">
+    
+  </div>
+</div>
+
+		<!-- page-banner-section 
+			================================================== -->
+
+<main id="main">
+
+	<div class="container">
+	
+	<div class="row section featured topspace">
+			<h2 class="section-title" id="Profile"><span><td>View Profile Details</span></h2>	
+
+			<div class="row" id="row">
+				<div class="col-sm-6 col-md-3">
+					<h4 class="text-center"><input type="button" class="img-circle1">  </h4>
+					<h6 id="personalDetails" style="margin-left:28px;"><span class="cover"><span class="more">Personal Details &rarr;</span></span></h6>
+					<table id="tablepD">
+					<tr>
+					   <th>Personal</th><th>Information</th>
+					</tr>
+			      <tr>
+			           <td>Name</td><td>{{userDetails.name}}</td>
+			      </tr>
+				  <tr>
+			           <td>Mobile No :</td><td>{{userDetails.mobileNo}}</td>
+			      </tr>
+				  <tr>
+			           <td>Age</td><td>{{userDetails.age}}</td>
+			      </tr><tr>
+			           <td>Location</td><td>{{userDetails.location}}</td>
+			      </tr>
+				  <tr>
+			           <td>Gender</td><td>{{userDetails.gender}}</td>
+			      </tr>
+			      </table>
+				
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<h4 class="text-center"><input type="button" class="img-circle2"></h4>
+					<h6 id="professionaldetails" style="margin-left:28px;"><span class="cover"><span class="more">Professional Details &rarr;</span></span></h6>
+					<table id="tablepD1">
+					<tr>
+					   <th>Professional</th><th>Information</th>
+					</tr>
+			      <tr>
+			           <td>Occupation : </td><td>{{userDetails.ocupation}}</td>
+			      </tr>
+				  <tr>
+			           <td>Designation</td><td>{{userDetails.designation}}</td>
+			      </tr>
+				  <tr>
+			           <td>Work Experience</td><td>{{userDetails.experience}}</td>
+			      </tr><tr>
+			           <td>Comapany</td><td>{{userDetails.company}}</td>
+			      </tr>
+				  
+			      </table>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<h4 class="text-center"><input type="button" class="img-circle3"></h4>
+					<h6 id="lifestyle" style="margin-left:28px;"><span class="cover"><span class="more">About My LifeStyles &rarr;</span></span></h6>
+					<table id="tablepD2">
+					<tr>
+					   <th>About</th><th>LifeStyle</th>
+					</tr>
+			      <tr>
+			           <td>Height</td><td>{{userDetails.height}}</td>
+			      </tr>
+				  <tr>
+			           <td>Weight</td><td>{{userDetails.weight}}</td>
+			      </tr>
+				  <tr>
+			           <td>Religion</td><td>{{userDetails.religion}}</td>
+			      </tr><tr>
+			           <td>Caste</td><td>{{userDetails.caste}}</td>
+			      </tr>
+				  <tr>
+			           <td>Birth Place</td><td>{{userDetails.birthPlace}}</td>
+			      </tr>
+			      </table>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<h4 class="text-center"><input type="button" class="img-circle4"></h4>
+					<h6 id="others" style="margin-left:28px;"><span class="cover"><span class="more">Family Details &rarr;</span></span></h6>
+					<table id="tablepD3">
+					<tr>
+					   <th>Family</th><th>Details</th>
+					</tr>
+			      <tr>
+			           <td>Father Occupation  : </td><td>{{userDetails.fatherOccupation}}</td>
+			      </tr>
+				  <tr>
+			           <td>Mother Occupation  : </td><td>{{userDetails.motherOccupation}}</td>
+			      </tr>
+				  <tr>
+			           <td>No Of Brother   : </td><td>{{userDetails.noOfBrother}}</td>
+			      </tr><tr>
+			           <td>No Of Sister    :  </td><td>{{userDetails.noOfSister}}</td>
+			      </tr>				 
+			      </table>
+				</div>
+				
+			</div>
+		</div> <!-- / section -->
+	
+	<div class="row section recentworks topspace">
+			
+			<h2 class="section-title"><span>{{userDetails.name}}'s Images</span></h2>
+			
+			<div class="thumbnails recentworks row" >
+				
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-repeat="image in images">
+					<a class="thumbnail">
+						<span class="img">
+							 <img ng-src="data:image/jpeg;base64,{{image.image}}">
+							<span class="cover"><span class="more"  ng-click="Toggle()">See details &rarr;</span></span>
+						</span>
+						<span class="title">Sample title - big data solutions</span>
+					</a>
+					
+					<h4></h4>
+					<p></p>
+				</div>
+				
+			</div>
+
+		</div>
+		
+ 		<div ng-init="Toggle()">
+		        <div ng-show="showDIv">Please Regitser	</div> 
+		</div>
+		
+		
+		 <!-- /section -->
+
+		<div class="row section topspace">
+			<div class="panel panel-cta"><div class="panel-body">
+				<div class="col-lg-8">
+					<p>A simple, nice-looking <b>call to action box</b>. Boxing is about respect. getting it for yourself, 
+					and taking it away from the other guy. no, this is mount everest. </p>
+				</div>
+				<div class="col-lg-4 text-right">
+					<a href="http://www.gettemplate.com/downloads/initio.zip " class="btn btn-primary btn-lg">Download template</a>
+				</div>
+			</div></div>
+		</div> <!-- /section -->
+
+		<div class="row section clients topspace">
+			<h2 class="section-title"><span>Clients</span></h2>
+			<div class="col-lg-12">
+				<p>
+					<img src="angular/images/sample_clients.png" alt="">
+				</p>
+			</div>
+		</div> <!-- /section -->
+
+	</div>	<!-- /container -->
+
+</main>
+
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p>+234 23 9873237<br>
+						<a href="mailto:#">some.email@somewhere.com</a><br>
+						<br>
+						234 Hidden Pond Road, Ashland City, TN 37015
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Follow me</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href=""><i class="fa fa-twitter fa-2"></i></a>
+						<a href=""><i class="fa fa-dribbble fa-2"></i></a>
+						<a href=""><i class="fa fa-github fa-2"></i></a>
+						<a href=""><i class="fa fa-facebook fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Text widget</h3>
+				<div class="widget-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Form widget</h3>
+				<div class="widget-body">
+					<p>+234 23 9873237<br>
+						<a href="mailto:#">some.email@somewhere.com</a><br>
+						<br>
+						234 Hidden Pond Road, Ashland City, TN 37015
+					</p>	
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p>234 Hidden Pond Road, Ashland City, TN 37015 </p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2014, Your awesome name here<br> 
+						Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> </p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+</body>
+</html>

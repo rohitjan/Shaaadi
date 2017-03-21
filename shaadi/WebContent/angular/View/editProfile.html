@@ -1,0 +1,413 @@
+<!doctype html>
+
+
+<html lang="en" class="no-js">
+<head>
+	<title>Charicen</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+$(document).ready(function(){
+	    
+	   $("#Personaldetails").show();      
+  
+    });
+
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+	
+	
+}
+
+  function openNav() {
+	    document.getElementById("myNav").style.height = "100%";
+	}
+
+	function closeNav() {
+	    document.getElementById("myNav").style.height = "0%";
+	}
+</script>
+	
+	<style>
+	
+	body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: orange;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: orange;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+</style>
+
+
+     
+
+</head>
+<body>
+
+	<!-- Container -->
+	<div id="container">
+		<!-- Header
+		    ================================================== -->
+		<header class="clearfix">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div class="top-line">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								<ul class="info-list">
+									<li>
+										<i class="fa fa-globe"></i>
+										Language: <span>English</span>
+									</li>
+									<li>
+										<i class="fa fa-phone"></i>
+										Call us:
+										<span>+1 223 334 3434</span>
+									</li>
+									<li>
+										<i class="fa fa-clock-o"></i>
+										working time:
+										<span>08:00 - 19:00</span>
+									</li>
+								</ul>
+							</div>	
+							<div class="col-md-4">
+								<ul class="social-icons">
+									<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+									<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+									<li><a class="dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+								</ul>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html">Chat-Book</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="services.html">Donations</a></li>
+							<li><a href="blog.html">blog</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li class="search"><a href="#" class="open-search"><i class="fa fa-search"></i></a>
+								<form class="form-search">
+									<input type="search" placeholder="Search:"/>
+									<button type="submit">
+										<i class="fa fa-search"></i>
+									</button>
+								</form>
+							</li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+		</header>
+		<!-- End Header -->
+
+		<!-- page-banner-section 
+			================================================== -->
+	
+			
+
+  <p>Click To Edit Profile Details</p>
+
+<ul class="tab nav navbar-nav navbar-right">
+  <li><a href="javascript:void(0)" class="tablinks active" onclick="openCity(event, 'Personaldetails')">Personal Details</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Professionaldetails')">Professional Details</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'LifeStyledetails')">LifeStyle Details</a></li>
+   <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Familydetails')">Family Details</a></li>
+     <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'uploadImage')">Upload Profile Image</a></li>
+</ul>
+
+<i><b>
+ 
+ <form ng-submit="submit()" enctype="multipart/form-data">
+<div id="Personaldetails" class="tabcontent">
+
+  <h3>Personal Details</h3>
+  <p>
+    
+     
+       <table style="margin-left:380px;">
+	    <tr> 
+		   <td style="padding:6px;">Name</td> <td style="padding:6px;"></td> <td style="padding:6px;"><input type="text" name="name" ng-model="details.name"></td>
+		 </tr>  
+		 <tr>
+		   <td style="padding:6px;">Mobile No</td><td style="padding:6px;"></td> <td style="padding:6px;"><input type="text" name="mobileNo" ng-model="details.mobileNo"></td>
+		   </tr>
+		   <tr>
+		   <td style="padding:6px;">Age</td><td></td> <td style="padding:6px;"><input type="text" ng-model="details.age" name="age"></td>
+		   </tr>
+		   <tr>
+		   <td style="padding:6px;">Location</td><td></td> <td style="padding:6px;"><input type="text" ng-model="details.location" name="location"></td>
+		   </tr>
+		   <tr>
+		   <td style="padding:6px;">Gender</td><td></td> <td style="padding:6px;"><input type="text" ng-model="details.gender" name="gender"></td>
+		   </tr>		
+	   </table>
+	    <div style="float:right; margin-right:150px;">
+           <input type="button" onclick="openCity(event, 'Professionaldetails')" value="Next" class="nextButton">
+		
+		  </div> 
+    
+	  
+
+</div>
+
+
+<div id="Professionaldetails" class="tabcontent">
+  <h3>Professional Details</h3>
+  <p>
+     
+       <table style="margin-left:380px;">
+	    <tr> 
+		   <td style="padding:6px;">Occupation </td> <td style="padding:6px;"></td> <td style="padding:6px;"><input type="text"  ng-model="details.ocupation" name="ocupation"></td>
+		 </tr>  
+		 <tr>
+		   <td style="padding:6px;">Designation</td><td style="padding:6px;"></td> <td style="padding:6px;"><input type="text"  ng-model="details.designation" name="designation"></td>
+		   </tr>
+		   <tr>
+		   <td style="padding:6px;">Work Experience</td><td></td> <td style="padding:6px;"><input type="text"  ng-model="details.experience" name="experience"></td>
+		   </tr>
+		   <tr>
+		   <td style="padding:6px;">Comapany</td><td></td> <td style="padding:6px;"><input type="text"  ng-model="details.company" name="company"></td>
+		   </tr>
+		   		
+	   </table>
+	    <div style="float:right; margin-right:150px;">
+         
+		  <input type="button" onclick="openCity(event, 'Personaldetails')" value="Previous" class="nextButton">
+		   <input type="button" onclick="openCity(event, 'LifeStyledetails')" value="Next" class="nextButton">
+		 </div> 
+     
+     
+
+</div>
+
+<div id="LifeStyledetails" class="tabcontent">
+  <h3>LifeStyle Details</h3>
+  <p>
+     
+       <table style="margin-left:380px;">
+	    <tr> 
+		   <td style="padding:6px;">Height</td> <td style="padding:6px;"></td> <td style="padding:6px;"><input type="text"  ng-model="details.height" name="height"></td>
+		 </tr>  
+		 <tr>
+		   <td style="padding:6px;">Weight</td><td style="padding:6px;"></td> <td style="padding:6px;"><input type="text" name="weight" ng-model="details.weight" ></td>
+		   </tr>
+		   <tr>
+		   <td style="padding:6px;">Religion</td><td></td> <td style="padding:6px;"><input type="text" name="religion" ng-model="details.religion"></td>
+		   </tr>
+		   <tr>
+		   <td style="padding:6px;">Caste</td><td></td> <td style="padding:6px;"><input type="text" name="caste" ng-model="details.caste"></td>
+		   </tr>
+		   <tr>
+		   <td style="padding:6px;">Birth Place</td><td></td> <td style="padding:6px;"><input type="text" name="birthPlace" ng-model="details.birthPlace"></td>
+		   </tr>		
+	   </table>
+	   <div style="float:right; margin-right:150px;">
+           
+		    <input type="button" onclick="openCity(event, 'Professionaldetails')" value="Previous" class="nextButton">
+			<input type="button" onclick="openCity(event, 'Familydetails')" value="Next" class="nextButton">
+		</div>	
+    
+
+</div>
+
+<div id="Familydetails" class="tabcontent">
+  <h3>Family Details</h3>
+  <p>
+  
+       <table style="margin-left:380px;">
+	    <tr> 
+		   <td style="padding:6px;">Father Occupation</td> <td style="padding:6px;"></td> <td style="padding:6px;"><input type="text" name="fatherOccupation" ng-model="details.fatherOccupation"></td>
+		 </tr>  
+		 <tr>
+		   <td style="padding:6px;">Mother Occupation</td><td style="padding:6px;"></td> <td style="padding:6px;"><input type="text" name="motherOccupation" ng-model="details.motherOccupation"></td>
+		   </tr>
+		   <tr>
+		   <td style="padding:6px;">No Of Brother</td><td></td> <td style="padding:6px;"><input type="text" name="noOfBrother" ng-model="details.noOfBrother"></td>
+		   </tr>
+		   <tr>
+		   <td style="padding:6px;">No Of Sister</td><td></td> <td style="padding:6px;"><input type="text" name="noOfSister" ng-model="details.noOfSister"></td>
+		   </tr>	
+          		   
+	   </table>
+	      <div style="float:right; margin-right:150px;">
+          <input type="button" onclick="openCity(event, 'LifeStyledetails')" value="Previous" class="nextButton">
+          <input type="button" onclick="openCity(event, 'uploadImage')" value="Next" class="nextButton">
+		   <input type="submit" value="Save" class="nextButton">
+		  </div>
+    
+
+</div>
+
+
+  
+</form>
+
+<form ng-submit="submit1()" enctype="multipart/form-data" method="post">
+<div id="uploadImage" class="tabcontent">
+   <div class="row section recentworks topspace">
+			
+			<h2 class="section-title"><span>Your Images</span></h2>
+			
+			<div class="thumbnails recentworks row" >
+				
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-repeat="image in images">
+					<a class="thumbnail" href="sidebar-right.html">
+						<span class="img">
+							 <img ng-src="data:image/jpeg;base64,{{image.image}}">
+							<span class="cover"><span class="more">See details &rarr;</span></span>
+						</span>
+						<span class="title">{{image.imageDescription}}</span>
+					</a>
+					<span class="details"><a href="" ng-click="setProfile(image.id)">Set-Profile</a> | <a href="" ng-click="setCover(image.id)">Set-Cover</a> | <a href="" ng-click="removeImage(image.id)">Remove</a></span>
+					<h4></h4>
+					<p></p>
+				</div>
+				
+			</div>
+
+		</div>
+  <p>	
+  <input type="file" name="file" file-model="myFile"/>
+  <input type="text" name="imageDescription" ng-model="imageDescription" placeholder="Write something About Image"/>
+  </p>
+	      <div style="float:right; margin-right:150px;">
+          <input type="button" onclick="openCity(event, 'Familydetails')" value="Previous" class="nextButton">
+		   <input type="submit" value="Save" class="nextButton">  
+		 
+		  </div>
+
+</div>
+
+      
+</form>
+ 
+ </b></i>
+<!-- <div id="error"><img src="https://dl.dropboxusercontent.com/u/23299152/Delete-icon.png" /> Your caps-lock is on.</div> -->
+
+  </div>
+
+
+
+
+
+</body>
+</html>
